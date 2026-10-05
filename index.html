@@ -532,8 +532,8 @@
 }
 
 .wheel {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
 
   position: relative;
 
@@ -573,8 +573,8 @@
 
   transform: translate(-50%, -50%);
 
-  width: 58px;
-  height: 58px;
+  width: 62px;
+  height: 62px;
 
   border-radius: 50%;
 
@@ -598,91 +598,79 @@
 .wheel-label {
   position: absolute;
 
-  left: 50%;
-  top: 50%;
-
-  width: 76px;
-
-  margin-left: -38px;
-  margin-top: -10px;
+  width: 82px;
 
   text-align: center;
 
   color: #8b4964;
 
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
 
-  line-height: 1.1;
+  line-height: 1.15;
 
   pointer-events: none;
 
-  transform-origin: center center;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
-/* Каждая надпись расположена в центре своего сектора */
+/* Верх */
 .label-1 {
   transform:
     translate(-50%, -50%)
-    rotate(22.5deg)
-    translateY(-93px)
-    rotate(-22.5deg);
+    translate(0, -94px);
 }
 
+/* Верх-право */
 .label-2 {
   transform:
     translate(-50%, -50%)
-    rotate(67.5deg)
-    translateY(-93px)
-    rotate(-67.5deg);
+    translate(67px, -67px);
 }
 
+/* Право */
 .label-3 {
   transform:
     translate(-50%, -50%)
-    rotate(112.5deg)
-    translateY(-93px)
-    rotate(-112.5deg);
+    translate(94px, 0);
 }
 
+/* Низ-право */
 .label-4 {
   transform:
     translate(-50%, -50%)
-    rotate(157.5deg)
-    translateY(-93px)
-    rotate(-157.5deg);
+    translate(67px, 67px);
 }
 
+/* Низ */
 .label-5 {
   transform:
     translate(-50%, -50%)
-    rotate(202.5deg)
-    translateY(-93px)
-    rotate(-202.5deg);
+    translate(0, 94px);
 }
 
+/* Низ-лево */
 .label-6 {
   transform:
     translate(-50%, -50%)
-    rotate(247.5deg)
-    translateY(-93px)
-    rotate(-247.5deg);
+    translate(-67px, 67px);
 }
 
+/* Лево */
 .label-7 {
   transform:
     translate(-50%, -50%)
-    rotate(292.5deg)
-    translateY(-93px)
-    rotate(-292.5deg);
+    translate(-94px, 0);
 }
 
+/* Верх-лево */
 .label-8 {
   transform:
     translate(-50%, -50%)
-    rotate(337.5deg)
-    translateY(-93px)
-    rotate(-337.5deg);
+    translate(-67px, -67px);
 }
 
 .spin-status {
@@ -1103,14 +1091,14 @@
 
       <div class="wheel" id="wheel1">
       
-        <div class="wheel-label label-1">НЕ ПОВЕЗЛО</div>
-        <div class="wheel-label label-2">НИЧЕГО 🤷</div>
-        <div class="wheel-label label-3">ПОЧТИ!</div>
-        <div class="wheel-label label-4">НЕ СУДЬБА</div>
-        <div class="wheel-label label-5">ПОДАРОК 🎁</div>
-        <div class="wheel-label label-6">НЕ СЕГОДНЯ</div>
-        <div class="wheel-label label-7">ЕЩЁ КРУГ</div>
-        <div class="wheel-label label-8">АДЕЛЬ</div>
+        <div class="wheel-label label-1">СЕРТИФИКАТ</div>
+        <div class="wheel-label label-2">НИЧЕГО🤷</div>
+        <div class="wheel-label label-3">БИЛЕТ</div>
+        <div class="wheel-label label-4">БеБеБе</div>
+        <div class="wheel-label label-5">СЮРПРИЗ🎁</div>
+        <div class="wheel-label label-6">ПОЖЕЛАНИЕ</div>
+        <div class="wheel-label label-7">УКРАШЕНИЕ</div>
+        <div class="wheel-label label-8">Адель переезжает в Казань</div>
       
       </div>
 
@@ -1142,8 +1130,8 @@
     </h1>
 
     <p class="subtitle">
-      Один сюрприз уже выигран.
-      Остался последний...
+      Один сюрприз уже выигран или нет)
+      Остался последний шанс...
     </p>
 
     <div class="roulette-area">
@@ -1152,13 +1140,13 @@
 
       <div class="wheel" id="wheel2">
       
-        <div class="wheel-label label-1">ПОДАРОК</div>
-        <div class="wheel-label label-2">УДАЧА</div>
-        <div class="wheel-label label-3">СЮРПРИЗ</div>
-        <div class="wheel-label label-4">БОНУС</div>
-        <div class="wheel-label label-5">ПОДАРОК</div>
-        <div class="wheel-label label-6">УДАЧА</div>
-        <div class="wheel-label label-7">СЮРПРИЗ</div>
+        <div class="wheel-label label-1">СЕРТИФИКАТ</div>
+        <div class="wheel-label label-2">МЕРЧ</div>
+        <div class="wheel-label label-3">МОСКВА</div>
+        <div class="wheel-label label-4">ДЕНЬГИ</div>
+        <div class="wheel-label label-5">СЮРПРИЗ🎁</div>
+        <div class="wheel-label label-6">НИЧЕГО🤷</div>
+        <div class="wheel-label label-7">УКРАШЕНИЕ</div>
         <div class="wheel-label label-8">БОНУС</div>
       
       </div>
