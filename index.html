@@ -503,138 +503,200 @@
     /* =========================
        РУЛЕТКА
        ========================= */
+.roulette-area {
+  width: 100%;
 
-    .roulette-area {
-      width: 100%;
+  display: flex;
+  flex-direction: column;
 
-      display: flex;
-      flex-direction: column;
+  align-items: center;
+}
 
-      align-items: center;
-    }
+.pointer {
+  width: 0;
+  height: 0;
 
-    .pointer {
-      width: 0;
-      height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 26px solid #e94f84;
 
-      border-left: 13px solid transparent;
-      border-right: 13px solid transparent;
-      border-top: 25px solid #e94f84;
+  margin-bottom: -3px;
 
-      margin-bottom: -3px;
+  position: relative;
+  z-index: 5;
 
-      position: relative;
-      z-index: 5;
+  filter:
+    drop-shadow(
+      0 3px 4px rgba(150,60,90,.22)
+    );
+}
 
-      filter:
-        drop-shadow(
-          0 3px 4px rgba(150,60,90,.22)
-        );
-    }
+.wheel {
+  width: 280px;
+  height: 280px;
 
-    .wheel {
-      width: 280px;
-      height: 280px;
+  position: relative;
 
-      position: relative;
+  border-radius: 50%;
 
-      border-radius: 50%;
+  border: 9px solid white;
 
-      border: 9px solid white;
+  background:
+    conic-gradient(
+      #f7b2c8 0deg 45deg,
+      #f9d2de 45deg 90deg,
+      #ec91b0 90deg 135deg,
+      #f8bfd2 135deg 180deg,
+      #f4a1bc 180deg 225deg,
+      #fbdce6 225deg 270deg,
+      #eb88aa 270deg 315deg,
+      #f7c8d8 315deg 360deg
+    );
 
-      background:
-        conic-gradient(
-          #f7b2c8 0deg 45deg,
-          #f9d2de 45deg 90deg,
-          #ec91b0 90deg 135deg,
-          #f8bfd2 135deg 180deg,
-          #f4a1bc 180deg 225deg,
-          #fbdce6 225deg 270deg,
-          #eb88aa 270deg 315deg,
-          #f7c8d8 315deg 360deg
-        );
+  box-shadow:
+    0 15px 35px rgba(200,80,120,.22);
 
-      box-shadow:
-        0 15px 35px rgba(200,80,120,.22);
+  transition:
+    transform 4s cubic-bezier(.12,.82,.18,1);
 
-      transition:
-        transform 4s cubic-bezier(.12,.82,.18,1);
+  overflow: hidden;
+}
 
-      overflow: hidden;
-    }
+/* Центральная кнопка */
+.wheel::after {
+  content: "🎀";
 
-    .wheel::after {
-      content: "?";
+  position: absolute;
 
-      position: absolute;
+  left: 50%;
+  top: 50%;
 
-      left: 50%;
-      top: 50%;
+  transform: translate(-50%, -50%);
 
-      transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
 
-      width: 58px;
-      height: 58px;
+  border-radius: 50%;
 
-      border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  background: white;
 
-      background: white;
+  color: #e94f84;
 
-      color: #e94f84;
+  font-size: 25px;
 
-      font-size: 28px;
-      font-weight: 900;
+  box-shadow:
+    0 5px 15px rgba(180,70,110,.18);
 
-      box-shadow:
-        0 5px 15px rgba(180,70,110,.18);
-    }
+  z-index: 3;
+}
 
-    .wheel-label {
-      position: absolute;
+/* Подписи */
+.wheel-label {
+  position: absolute;
 
-      left: 50%;
-      top: 50%;
+  left: 50%;
+  top: 50%;
 
-      width: 82px;
+  width: 76px;
 
-      margin-left: -41px;
-      margin-top: -10px;
+  margin-left: -38px;
+  margin-top: -10px;
 
-      text-align: center;
+  text-align: center;
 
-      color: rgba(100,40,65,.72);
+  color: #8b4964;
 
-      font-size: 11px;
-      font-weight: 800;
+  font-size: 10px;
+  font-weight: 800;
 
-      pointer-events: none;
-    }
+  line-height: 1.1;
 
-    .label-1 { transform: rotate(22.5deg) translateY(-108px) rotate(-22.5deg); }
-    .label-2 { transform: rotate(67.5deg) translateY(-108px) rotate(-67.5deg); }
-    .label-3 { transform: rotate(112.5deg) translateY(-108px) rotate(-112.5deg); }
-    .label-4 { transform: rotate(157.5deg) translateY(-108px) rotate(-157.5deg); }
-    .label-5 { transform: rotate(202.5deg) translateY(-108px) rotate(-202.5deg); }
-    .label-6 { transform: rotate(247.5deg) translateY(-108px) rotate(-247.5deg); }
-    .label-7 { transform: rotate(292.5deg) translateY(-108px) rotate(-292.5deg); }
-    .label-8 { transform: rotate(337.5deg) translateY(-108px) rotate(-337.5deg); }
+  pointer-events: none;
 
-    .spin-status {
-      min-height: 25px;
+  transform-origin: center center;
+}
 
-      margin: 22px 0 20px;
+/* Каждая надпись расположена в центре своего сектора */
+.label-1 {
+  transform:
+    translate(-50%, -50%)
+    rotate(22.5deg)
+    translateY(-93px)
+    rotate(-22.5deg);
+}
 
-      text-align: center;
+.label-2 {
+  transform:
+    translate(-50%, -50%)
+    rotate(67.5deg)
+    translateY(-93px)
+    rotate(-67.5deg);
+}
 
-      color: #df527f;
+.label-3 {
+  transform:
+    translate(-50%, -50%)
+    rotate(112.5deg)
+    translateY(-93px)
+    rotate(-112.5deg);
+}
 
-      font-size: 15px;
-      font-weight: 800;
-    }
+.label-4 {
+  transform:
+    translate(-50%, -50%)
+    rotate(157.5deg)
+    translateY(-93px)
+    rotate(-157.5deg);
+}
+
+.label-5 {
+  transform:
+    translate(-50%, -50%)
+    rotate(202.5deg)
+    translateY(-93px)
+    rotate(-202.5deg);
+}
+
+.label-6 {
+  transform:
+    translate(-50%, -50%)
+    rotate(247.5deg)
+    translateY(-93px)
+    rotate(-247.5deg);
+}
+
+.label-7 {
+  transform:
+    translate(-50%, -50%)
+    rotate(292.5deg)
+    translateY(-93px)
+    rotate(-292.5deg);
+}
+
+.label-8 {
+  transform:
+    translate(-50%, -50%)
+    rotate(337.5deg)
+    translateY(-93px)
+    rotate(-337.5deg);
+}
+
+.spin-status {
+  min-height: 25px;
+
+  margin: 22px 0 20px;
+
+  text-align: center;
+
+  color: #df527f;
+
+  font-size: 15px;
+  font-weight: 800;
+}
 
     /* =========================
        ПОБЕДА
@@ -1040,16 +1102,16 @@
       <div class="pointer"></div>
 
       <div class="wheel" id="wheel1">
-
-        <div class="wheel-label label-1">СЮРПРИЗ</div>
-        <div class="wheel-label label-2">?</div>
-        <div class="wheel-label label-3">СЕКРЕТ</div>
-        <div class="wheel-label label-4">?</div>
-        <div class="wheel-label label-5">ПОДАРОК</div>
-        <div class="wheel-label label-6">?</div>
-        <div class="wheel-label label-7">СЮРПРИЗ</div>
-        <div class="wheel-label label-8">?</div>
-
+      
+        <div class="wheel-label label-1">НЕ ПОВЕЗЛО</div>
+        <div class="wheel-label label-2">НИЧЕГО 🤷</div>
+        <div class="wheel-label label-3">ПОЧТИ!</div>
+        <div class="wheel-label label-4">НЕ СУДЬБА</div>
+        <div class="wheel-label label-5">ПОДАРОК 🎁</div>
+        <div class="wheel-label label-6">НЕ СЕГОДНЯ</div>
+        <div class="wheel-label label-7">ЕЩЁ КРУГ</div>
+        <div class="wheel-label label-8">АДЕЛЬ</div>
+      
       </div>
 
       <div class="spin-status" id="spinStatus1">
@@ -1089,16 +1151,16 @@
       <div class="pointer"></div>
 
       <div class="wheel" id="wheel2">
-
-        <div class="wheel-label label-1">СЕКРЕТ</div>
-        <div class="wheel-label label-2">?</div>
+      
+        <div class="wheel-label label-1">ПОДАРОК</div>
+        <div class="wheel-label label-2">УДАЧА</div>
         <div class="wheel-label label-3">СЮРПРИЗ</div>
-        <div class="wheel-label label-4">?</div>
+        <div class="wheel-label label-4">БОНУС</div>
         <div class="wheel-label label-5">ПОДАРОК</div>
-        <div class="wheel-label label-6">?</div>
-        <div class="wheel-label label-7">СЕКРЕТ</div>
-        <div class="wheel-label label-8">?</div>
-
+        <div class="wheel-label label-6">УДАЧА</div>
+        <div class="wheel-label label-7">СЮРПРИЗ</div>
+        <div class="wheel-label label-8">БОНУС</div>
+      
       </div>
 
       <div class="spin-status" id="spinStatus2">
@@ -1462,23 +1524,22 @@
       случайная рулетка, но результат заранее задан.
     */
 
-    if (number === 1) {
+  if (number === 1) {
 
-      wheelRotation1 +=
-        360 * 6 + 135;
+  wheelRotation1 +=
+    360 * 6 + 157.5;
 
-      wheel.style.transform =
-        `rotate(${wheelRotation1}deg)`;
+  wheel.style.transform =
+    `rotate(${wheelRotation1}deg)`;
 
-    } else {
+} else {
 
-      wheelRotation2 +=
-        360 * 7 + 225;
+  wheelRotation2 +=
+    360 * 7 + 157.5;
 
-      wheel.style.transform =
-        `rotate(${wheelRotation2}deg)`;
-
-    }
+  wheel.style.transform =
+    `rotate(${wheelRotation2}deg)`;
+}
 
 
     setTimeout(() => {
