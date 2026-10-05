@@ -28,6 +28,7 @@
         "Segoe UI",
         Arial,
         sans-serif;
+
       background: #fff5f8;
       color: #30303a;
     }
@@ -98,7 +99,6 @@
     .badge span {
       font-size: 52px;
       font-weight: 900;
-
       color: white;
 
       text-shadow:
@@ -112,7 +112,6 @@
 
       font-size: 28px;
       line-height: 1.2;
-
       font-weight: 800;
     }
 
@@ -154,11 +153,15 @@
       box-shadow:
         0 8px 20px rgba(233, 79, 132, 0.25);
 
-      transition: transform 0.15s ease;
+      transition: transform .15s ease;
     }
 
     .btn:active {
-      transform: scale(0.98);
+      transform: scale(.98);
+    }
+
+    .btn:disabled {
+      cursor: default;
     }
 
     .decor {
@@ -182,7 +185,7 @@
     }
 
     /* =========================
-       ЭКРАН 3 — ПОЖЕЛАНИЯ
+       ПОЖЕЛАНИЯ
        ========================= */
 
     .wish-list {
@@ -197,7 +200,7 @@
     }
 
     .wish-card {
-      background: #ffffff;
+      background: #fff;
 
       border: 1px solid #f5ccd9;
 
@@ -208,11 +211,11 @@
       text-align: left;
 
       box-shadow:
-        0 5px 15px rgba(200, 100, 130, 0.08);
+        0 5px 15px rgba(200, 100, 130, .08);
     }
 
     /* =========================
-       ЭКРАН 4 — БУКЕТ
+       БУКЕТ
        ========================= */
 
     .bouquet-wrap {
@@ -236,14 +239,14 @@
       background:
         radial-gradient(
           circle at 35% 30%,
-          #ffffff 0%,
+          #fff 0%,
           #ffe4ec 35%,
           #f7aec5 100%
         );
 
       box-shadow:
-        0 15px 40px rgba(220, 90, 130, 0.22),
-        inset 0 0 0 5px rgba(255, 255, 255, 0.65);
+        0 15px 40px rgba(220, 90, 130, .22),
+        inset 0 0 0 5px rgba(255,255,255,.65);
 
       font-size: 105px;
     }
@@ -279,7 +282,7 @@
     }
 
     /* =========================
-       ЭКРАН 5 — АДРЕС
+       ДОСТАВКА
        ========================= */
 
     .delivery-icon {
@@ -304,8 +307,8 @@
       font-size: 48px;
 
       box-shadow:
-        0 12px 30px rgba(210, 90, 130, 0.2),
-        inset 0 0 0 4px rgba(255, 255, 255, 0.7);
+        0 12px 30px rgba(210, 90, 130, .2),
+        inset 0 0 0 4px rgba(255,255,255,.7);
     }
 
     .input-label {
@@ -330,7 +333,7 @@
 
       border-radius: 15px;
 
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255,255,255,.9);
 
       color: #333;
 
@@ -339,18 +342,14 @@
       outline: none;
 
       box-shadow:
-        0 5px 15px rgba(200, 100, 130, 0.06);
-
-      transition:
-        border-color 0.2s,
-        box-shadow 0.2s;
+        0 5px 15px rgba(200,100,130,.06);
     }
 
     .delivery-input:focus {
       border-color: #eb7198;
 
       box-shadow:
-        0 0 0 3px rgba(235, 113, 152, 0.12);
+        0 0 0 3px rgba(235,113,152,.12);
     }
 
     .delivery-hint {
@@ -365,7 +364,7 @@
     }
 
     /* =========================
-       ЭКРАН 6 — ВРЕМЯ
+       ВРЕМЯ
        ========================= */
 
     .time-title {
@@ -382,8 +381,7 @@
     .time-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 10px;
 
@@ -406,11 +404,11 @@
 
       cursor: pointer;
 
-      transition: 0.15s ease;
+      transition: .15s ease;
     }
 
     .time-btn:active {
-      transform: scale(0.97);
+      transform: scale(.97);
     }
 
     .time-btn.selected {
@@ -426,7 +424,7 @@
       border-color: transparent;
 
       box-shadow:
-        0 6px 16px rgba(233, 79, 132, 0.22);
+        0 6px 16px rgba(233,79,132,.22);
     }
 
     .selected-time {
@@ -443,14 +441,14 @@
     }
 
     /* =========================
-       ЭКРАН 7 — ВРЕМЕННАЯ ЗАГЛУШКА
+       ТАЙНЫЕ ПРИЗЫ
        ========================= */
 
     .secret-icon {
-      width: 130px;
-      height: 130px;
+      width: 135px;
+      height: 135px;
 
-      margin: 0 auto 24px;
+      margin: 0 auto 25px;
 
       border-radius: 50%;
 
@@ -459,561 +457,1129 @@
       justify-content: center;
 
       background:
-        linear-gradient(
-          145deg,
-          #f8c2d3,
-          #ec8fac
+        radial-gradient(
+          circle at 35% 30%,
+          #ffffff,
+          #f9cada 45%,
+          #ef93b1 100%
         );
 
-      font-size: 58px;
+      font-size: 65px;
 
       box-shadow:
-        0 15px 35px rgba(210, 90, 130, 0.22),
-        inset 0 0 0 4px rgba(255,255,255,0.7);
+        0 15px 40px rgba(210,90,130,.22),
+        inset 0 0 0 5px rgba(255,255,255,.7);
     }
+
+    .secret-box {
+      width: 100%;
+
+      padding: 18px;
+
+      margin-bottom: 25px;
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,.78);
+
+      border: 1px solid #f3ccd9;
+
+      text-align: center;
+
+      box-shadow:
+        0 7px 20px rgba(200,100,130,.06);
+    }
+
+    .secret-box strong {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #df527f;
+
+      font-size: 18px;
+    }
+
+    /* =========================
+       РУЛЕТКА
+       ========================= */
+
+    .roulette-area {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+    }
+
+    .pointer {
+      width: 0;
+      height: 0;
+
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      border-top: 25px solid #e94f84;
+
+      margin-bottom: -3px;
+
+      position: relative;
+      z-index: 5;
+
+      filter:
+        drop-shadow(
+          0 3px 4px rgba(150,60,90,.22)
+        );
+    }
+
+    .wheel {
+      width: 280px;
+      height: 280px;
+
+      position: relative;
+
+      border-radius: 50%;
+
+      border: 9px solid white;
+
+      background:
+        conic-gradient(
+          #f7b2c8 0deg 45deg,
+          #f9d2de 45deg 90deg,
+          #ec91b0 90deg 135deg,
+          #f8bfd2 135deg 180deg,
+          #f4a1bc 180deg 225deg,
+          #fbdce6 225deg 270deg,
+          #eb88aa 270deg 315deg,
+          #f7c8d8 315deg 360deg
+        );
+
+      box-shadow:
+        0 15px 35px rgba(200,80,120,.22);
+
+      transition:
+        transform 4s cubic-bezier(.12,.82,.18,1);
+
+      overflow: hidden;
+    }
+
+    .wheel::after {
+      content: "?";
+
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: white;
+
+      color: #e94f84;
+
+      font-size: 28px;
+      font-weight: 900;
+
+      box-shadow:
+        0 5px 15px rgba(180,70,110,.18);
+    }
+
+    .wheel-label {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: 82px;
+
+      margin-left: -41px;
+      margin-top: -10px;
+
+      text-align: center;
+
+      color: rgba(100,40,65,.72);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      pointer-events: none;
+    }
+
+    .label-1 { transform: rotate(22.5deg) translateY(-108px) rotate(-22.5deg); }
+    .label-2 { transform: rotate(67.5deg) translateY(-108px) rotate(-67.5deg); }
+    .label-3 { transform: rotate(112.5deg) translateY(-108px) rotate(-112.5deg); }
+    .label-4 { transform: rotate(157.5deg) translateY(-108px) rotate(-157.5deg); }
+    .label-5 { transform: rotate(202.5deg) translateY(-108px) rotate(-202.5deg); }
+    .label-6 { transform: rotate(247.5deg) translateY(-108px) rotate(-247.5deg); }
+    .label-7 { transform: rotate(292.5deg) translateY(-108px) rotate(-292.5deg); }
+    .label-8 { transform: rotate(337.5deg) translateY(-108px) rotate(-337.5deg); }
+
+    .spin-status {
+      min-height: 25px;
+
+      margin: 22px 0 20px;
+
+      text-align: center;
+
+      color: #df527f;
+
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       ПОБЕДА
+       ========================= */
+
+    .winner {
+      text-align: center;
+    }
+
+    .winner-icon {
+      font-size: 78px;
+
+      margin-bottom: 18px;
+
+      filter:
+        drop-shadow(
+          0 5px 10px rgba(200,80,120,.15)
+        );
+    }
+
+    .winner-title {
+      margin: 0 0 12px;
+
+      color: #df527f;
+
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    .winner-text {
+      max-width: 340px;
+
+      margin: 0 auto 28px;
+
+      color: #777783;
+
+      font-size: 16px;
+      line-height: 1.55;
+
+      text-align: center;
+    }
+
+    /* =========================
+       ФИНАЛ
+       ========================= */
+
+    .final-card {
+      width: 100%;
+
+      padding: 22px;
+
+      margin-bottom: 25px;
+
+      border-radius: 20px;
+
+      background: white;
+
+      border: 1px solid #f3ccd9;
+
+      box-shadow:
+        0 10px 30px rgba(200,100,130,.10);
+    }
+
+    .final-item {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 13px 0;
+
+      border-bottom: 1px solid #f5e1e7;
+
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .final-item:last-child {
+      border-bottom: 0;
+    }
+
+    .final-item-icon {
+      font-size: 24px;
+    }
+
+    .final-secret {
+      color: #df527f;
+      font-weight: 800;
+    }
+
+    .final-note {
+      margin-top: 20px;
+
+      text-align: center;
+
+      color: #777783;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <div class="app">
+<div class="app">
 
-    <!-- =========================
-         ЭКРАН 1
-         ========================= -->
+  <!-- =========================
+       ЭКРАН 1
+       ========================= -->
 
-    <section id="screen1" class="screen active">
+  <section id="screen1" class="screen active">
 
-      <div class="badge">
-        <span>22</span>
+    <div class="badge">
+      <span>22</span>
+    </div>
+
+    <h1 class="title">
+      🎀 Лина, сегодня твой день!
+    </h1>
+
+    <p class="subtitle">
+      Для тебя приготовлено небольшое путешествие,
+      несколько сюрпризов и один особенный финал ✨
+    </p>
+
+    <button class="btn" onclick="startBirthday()">
+      Начать 🎀
+    </button>
+
+    <div class="decor">
+      ✨ 🌷 🎂 ✨
+    </div>
+
+    <div class="small">
+      Создано специально для Лины
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 2
+       ========================= -->
+
+  <section id="screen2" class="screen">
+
+    <div class="badge">
+      <span>22</span>
+    </div>
+
+    <h1 class="title">
+      🎂 Тебе сегодня 22!
+    </h1>
+
+    <p class="subtitle">
+      Добро пожаловать в твой маленький
+      праздничный день.
+      Дальше будет ещё интереснее ✨
+    </p>
+
+    <button class="btn" onclick="showScreen(3)">
+      Продолжить ✨
+    </button>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 3
+       ========================= -->
+
+  <section id="screen3" class="screen">
+
+    <h1 class="title">
+      ✨ А теперь — несколько пожеланий
+    </h1>
+
+    <p class="subtitle">
+      Пусть в 22 будет побольше всего хорошего:
+    </p>
+
+    <div class="wish-list">
+
+      <div class="wish-card">
+        🌷 Исполнения желаний
+      </div>
+
+      <div class="wish-card">
+        ☀️ Побольше ярких и приятных моментов
+      </div>
+
+      <div class="wish-card">
+        ✈️ Новых впечатлений и интересных поездок
+      </div>
+
+      <div class="wish-card">
+        😊 Побольше поводов улыбаться
+      </div>
+
+      <div class="wish-card">
+        🎀 И чтобы этот год запомнился
+        только хорошими событиями
+      </div>
+
+    </div>
+
+    <button class="btn" onclick="showScreen(4)">
+      Дальше 🎀
+    </button>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 4 — БУКЕТ
+       ========================= -->
+
+  <section id="screen4" class="screen">
+
+    <div class="bouquet-wrap">
+
+      <div class="bouquet">
+        💐
+      </div>
+
+    </div>
+
+    <div style="text-align:center;">
+
+      <div class="surprise-label">
+        ПЕРВЫЙ СЮРПРИЗ
       </div>
 
       <h1 class="title">
-        🎀 Лина, сегодня твой день!
+        💐 Для тебя — букет!
       </h1>
 
-      <p class="subtitle">
-        Для тебя приготовлено небольшое путешествие,
-        несколько сюрпризов и один особенный финал ✨
+      <p class="bouquet-note">
+        Начнём с самого приятного.
+        Сегодня тебя ждёт красивый букет,
+        который будет доставлен специально
+        для тебя ✨
+      </p>
+
+      <button class="btn" onclick="showScreen(5)">
+        Получить букет 🌷
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 5 — АДРЕС
+       ========================= -->
+
+  <section id="screen5" class="screen">
+
+    <div class="delivery-icon">
+      📍
+    </div>
+
+    <h1 class="title">
+      Куда доставить букет?
+    </h1>
+
+    <p class="subtitle">
+      Осталось совсем немного.
+      Укажи место, куда можно будет
+      доставить первый сюрприз 💐
+    </p>
+
+    <div style="width:100%;">
+
+      <label class="input-label" for="deliveryLocation">
+        Адрес доставки
+      </label>
+
+      <input
+        id="deliveryLocation"
+        class="delivery-input"
+        type="text"
+        placeholder="Например: г.Казань, ул. ..."
+        autocomplete="street-address"
+      >
+
+      <p class="delivery-hint">
+        Можно указать адрес ДУ, адрес учебы/работы
+        или другое удобное место.
+      </p>
+
+      <button class="btn" onclick="saveLocation()">
+        Продолжить 🎀
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 6 — ВРЕМЯ
+       ========================= -->
+
+  <section id="screen6" class="screen">
+
+    <div class="delivery-icon">
+      🕐
+    </div>
+
+    <h1 class="title">
+      Во сколько доставить?
+    </h1>
+
+    <p class="subtitle">
+      Выбери удобное время для получения
+      букета 💐
+    </p>
+
+    <div style="width:100%;">
+
+      <p class="time-title">
+        Время доставки
+      </p>
+
+      <div class="time-grid" id="timeGrid"></div>
+
+      <p class="selected-time" id="selectedTime">
+        Выбери время
       </p>
 
       <button
         class="btn"
-        onclick="startBirthday()"
+        id="timeNext"
+        onclick="saveTime()"
+        style="opacity:.45"
+        disabled
       >
-        Начать 🎀
+        Продолжить 🎀
       </button>
 
-      <div class="decor">
-        ✨ 🌷 🎂 ✨
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 7 — ТАЙНЫЕ СЮРПРИЗЫ
+       ========================= -->
+
+  <section id="screen7" class="screen">
+
+    <div class="secret-icon">
+      🎁
+    </div>
+
+    <h1 class="title">
+      И это ещё не всё...
+    </h1>
+
+    <div class="secret-box">
+
+      <strong>
+        Для тебя приготовлены ещё два сюрприза
+      </strong>
+
+      Здесь всё останется тайной до самой
+      доставки.
+
+    </div>
+
+    <p class="subtitle">
+      Ты сможешь выиграть оба.
+      Названия и содержимое пока скрыты 🤫
+    </p>
+
+    <button class="btn" onclick="startRoulette(1)">
+      Начать рулетку 🎰
+    </button>
+
+  </section>
+
+
+  <!-- =========================
+       ЭКРАН 8 — РУЛЕТКА №1
+       ========================= -->
+
+  <section id="screen8" class="screen">
+
+    <h1 class="title">
+      🎰 Тайный приз №1
+    </h1>
+
+    <p class="subtitle">
+      Крути рулетку и узнай, что тебе выпало...
+    </p>
+
+    <div class="roulette-area">
+
+      <div class="pointer"></div>
+
+      <div class="wheel" id="wheel1">
+
+        <div class="wheel-label label-1">СЮРПРИЗ</div>
+        <div class="wheel-label label-2">?</div>
+        <div class="wheel-label label-3">СЕКРЕТ</div>
+        <div class="wheel-label label-4">?</div>
+        <div class="wheel-label label-5">ПОДАРОК</div>
+        <div class="wheel-label label-6">?</div>
+        <div class="wheel-label label-7">СЮРПРИЗ</div>
+        <div class="wheel-label label-8">?</div>
+
       </div>
 
-      <div class="small">
-        Создано специально для Лины
+      <div class="spin-status" id="spinStatus1">
+        Нажми кнопку
       </div>
-
-    </section>
-
-
-    <!-- =========================
-         ЭКРАН 2
-         ========================= -->
-
-    <section id="screen2" class="screen">
-
-      <div class="badge">
-        <span>22</span>
-      </div>
-
-      <h1 class="title">
-        🎂 Тебе сегодня 22!
-      </h1>
-
-      <p class="subtitle">
-        Добро пожаловать в твой маленький
-        праздничный день.
-        Дальше будет ещё интереснее ✨
-      </p>
 
       <button
         class="btn"
-        onclick="nextScreen()"
+        id="spinButton1"
+        onclick="spinRoulette(1)"
       >
-        Продолжить ✨
+        Крутить 🎰
       </button>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         ЭКРАН 3
-         ========================= -->
+  <!-- =========================
+       ЭКРАН 9 — РУЛЕТКА №2
+       ========================= -->
 
-    <section id="screen3" class="screen">
+  <section id="screen9" class="screen">
 
-      <h1 class="title">
-        ✨ А теперь — несколько пожеланий
-      </h1>
+    <h1 class="title">
+      🎰 Тайный приз №2
+    </h1>
 
-      <p class="subtitle">
-        Пусть в 22 будет побольше всего хорошего:
-      </p>
+    <p class="subtitle">
+      Один сюрприз уже выигран.
+      Остался последний...
+    </p>
 
-      <div class="wish-list">
+    <div class="roulette-area">
 
-        <div class="wish-card">
-          🌷 Исполнения желаний
-        </div>
+      <div class="pointer"></div>
 
-        <div class="wish-card">
-          ☀️ Побольше ярких и приятных моментов
-        </div>
+      <div class="wheel" id="wheel2">
 
-        <div class="wish-card">
-          ✈️ Новых впечатлений и интересных поездок
-        </div>
+        <div class="wheel-label label-1">СЕКРЕТ</div>
+        <div class="wheel-label label-2">?</div>
+        <div class="wheel-label label-3">СЮРПРИЗ</div>
+        <div class="wheel-label label-4">?</div>
+        <div class="wheel-label label-5">ПОДАРОК</div>
+        <div class="wheel-label label-6">?</div>
+        <div class="wheel-label label-7">СЕКРЕТ</div>
+        <div class="wheel-label label-8">?</div>
 
-        <div class="wish-card">
-          😊 Побольше поводов улыбаться
-        </div>
+      </div>
 
-        <div class="wish-card">
-          🎀 И чтобы этот год запомнился
-          только хорошими событиями
-        </div>
-
+      <div class="spin-status" id="spinStatus2">
+        Нажми кнопку
       </div>
 
       <button
         class="btn"
-        onclick="showScreen(4)"
+        id="spinButton2"
+        onclick="spinRoulette(2)"
       >
-        Дальше 🎀
+        Крутить 🎰
       </button>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         ЭКРАН 4 — БУКЕТ
-         ========================= -->
+  <!-- =========================
+       ЭКРАН 10 — ПОБЕДА
+       ========================= -->
 
-    <section id="screen4" class="screen">
+  <section id="screen10" class="screen">
 
-      <div class="bouquet-wrap">
+    <div class="winner">
 
-        <div class="bouquet">
-          💐
-        </div>
-
+      <div class="winner-icon">
+        🏆
       </div>
 
-      <div style="text-align:center;">
-
-        <div class="surprise-label">
-          ПЕРВЫЙ СЮРПРИЗ
-        </div>
-
-        <h1 class="title">
-          💐 Для тебя — букет!
-        </h1>
-
-        <p class="bouquet-note">
-          Начнём с самого приятного.
-          Сегодня тебя ждёт красивый букет,
-          который будет доставлен специально
-          для тебя ✨
-        </p>
-
-        <button
-          class="btn"
-          onclick="showScreen(5)"
-        >
-          Получить букет 🌷
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ЭКРАН 5 — АДРЕС
-         ========================= -->
-
-    <section id="screen5" class="screen">
-
-      <div class="delivery-icon">
-        📍
-      </div>
-
-      <h1 class="title">
-        Куда доставить букет?
+      <h1 class="winner-title">
+        Два приза выиграны!
       </h1>
 
-      <p class="subtitle">
-        Осталось совсем немного.
-        Укажи место, куда можно будет
-        доставить первый сюрприз 💐
-      </p>
-
-      <div style="width:100%;">
-
-        <label
-          class="input-label"
-          for="deliveryLocation"
-        >
-          Адрес доставки
-        </label>
-
-        <input
-          id="deliveryLocation"
-          class="delivery-input"
-          type="text"
-          placeholder="Например: Москва, ул. ..."
-          autocomplete="street-address"
-        >
-
-        <p class="delivery-hint">
-          Можно указать адрес, адрес работы
-          или другое удобное место.
-        </p>
-
-        <button
-          class="btn"
-          onclick="saveLocation()"
-        >
-          Продолжить 🎀
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ЭКРАН 6 — ВРЕМЯ
-         ========================= -->
-
-    <section id="screen6" class="screen">
-
-      <div class="delivery-icon">
-        🕐
-      </div>
-
-      <h1 class="title">
-        Во сколько доставить?
-      </h1>
-
-      <p class="subtitle">
-        Выбери удобное время для получения
-        букета 💐
-      </p>
-
-      <div style="width:100%;">
-
-        <p class="time-title">
-          Время доставки
-        </p>
-
-        <div
-          class="time-grid"
-          id="timeGrid"
-        ></div>
-
-        <p
-          class="selected-time"
-          id="selectedTime"
-        >
-          Выбери время
-        </p>
-
-        <button
-          class="btn"
-          id="timeNext"
-          onclick="saveTime()"
-          style="opacity:.45"
-          disabled
-        >
-          Продолжить 🎀
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ЭКРАН 7 — ПОКА ЗАГЛУШКА
-         ========================= -->
-
-    <section id="screen7" class="screen">
-
-      <div class="secret-icon">
-        🎁
-      </div>
-
-      <h1 class="title">
-        Готово! 🎀
-      </h1>
-
-      <p class="subtitle">
-        Букет отправится по выбранному
-        адресу и в выбранное время.
+      <p class="winner-text">
+        Поздравляем! 🎀
+        Ты выиграла оба тайных сюрприза.
 
         <br><br>
 
-        Но на этом поздравление
-        ещё не заканчивается... ✨
+        Но что именно это такое —
+        пока останется секретом 🤫
       </p>
 
-      <button
-        class="btn"
-        onclick="showSecretMessage()"
-      >
-        Продолжить 🎁
-      </button>
+    </div>
 
-    </section>
+    <div class="final-card">
 
-  </div>
+      <div class="final-item">
+
+        <div class="final-item-icon">
+          💐
+        </div>
+
+        <div>
+          <strong>Букет</strong><br>
+          Заказан для доставки
+        </div>
+
+      </div>
+
+      <div class="final-item">
+
+        <div class="final-item-icon">
+          🎁
+        </div>
+
+        <div>
+          <span class="final-secret">
+            Тайный приз №1
+          </span><br>
+          Выигран
+        </div>
+
+      </div>
+
+      <div class="final-item">
+
+        <div class="final-item-icon">
+          🎁
+        </div>
+
+        <div>
+          <span class="final-secret">
+            Тайный приз №2
+          </span><br>
+          Выигран
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="final-note">
+      Что именно тебя ждёт?
+      Узнаешь, когда всё окажется у тебя ✨
+      <br><br>
+      С днём рождения, Лина! 🎂
+    </p>
+
+    <button class="btn" onclick="finishBirthday()">
+      Завершить 🎀
+    </button>
+
+  </section>
+
+</div>
 
 
-  <script>
+<script>
 
-    /* =========================
-       TELEGRAM
-       ========================= */
+  /* =========================
+     TELEGRAM
+     ========================= */
 
-    const tg = window.Telegram?.WebApp;
+  const tg = window.Telegram?.WebApp;
 
-    if (tg) {
-      tg.ready();
-      tg.expand();
+  if (tg) {
+    tg.ready();
+    tg.expand();
+  }
+
+
+  /* =========================
+     ДАННЫЕ
+     ========================= */
+
+  let currentScreen = 1;
+
+  let deliveryLocation = "";
+
+  let deliveryTime = "";
+
+  let roulette1Finished = false;
+
+  let roulette2Finished = false;
+
+
+  /* =========================
+     ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ
+     ========================= */
+
+  function showScreen(number) {
+
+    document
+      .querySelectorAll(".screen")
+      .forEach(screen => {
+        screen.classList.remove("active");
+      });
+
+    const screen =
+      document.getElementById(
+        "screen" + number
+      );
+
+    if (!screen) {
+      console.error(
+        "Экран не найден:",
+        number
+      );
+
+      return;
     }
 
+    screen.classList.add("active");
 
-    /* =========================
-       ПЕРЕМЕННЫЕ
-       ========================= */
+    window.scrollTo(0, 0);
 
-    let currentScreen = 1;
-
-    let deliveryLocation = "";
-
-    let deliveryTime = "";
+    currentScreen = number;
+  }
 
 
-    /* =========================
-       ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ
-       ========================= */
+  /* =========================
+     СТАРТ
+     ========================= */
 
-    function showScreen(number) {
+  function startBirthday() {
+    showScreen(2);
+  }
+
+
+  /* =========================
+     АДРЕС
+     ========================= */
+
+  function saveLocation() {
+
+    const input =
+      document.getElementById(
+        "deliveryLocation"
+      );
+
+    const value =
+      input.value.trim();
+
+    if (!value) {
+      input.focus();
+      return;
+    }
+
+    deliveryLocation = value;
+
+    showScreen(6);
+  }
+
+
+  /* =========================
+     ВРЕМЯ
+     ========================= */
+
+  const timeGrid =
+    document.getElementById(
+      "timeGrid"
+    );
+
+  const selectedTimeText =
+    document.getElementById(
+      "selectedTime"
+    );
+
+  const timeNextButton =
+    document.getElementById(
+      "timeNext"
+    );
+
+
+  const deliveryTimes = [
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00"
+  ];
+
+
+  deliveryTimes.forEach(time => {
+
+    const button =
+      document.createElement(
+        "button"
+      );
+
+    button.className =
+      "time-btn";
+
+    button.textContent =
+      time;
+
+    button.type =
+      "button";
+
+    button.onclick = () => {
+
+      deliveryTime = time;
 
       document
-        .querySelectorAll(".screen")
-        .forEach(screen => {
-
-          screen.classList.remove("active");
-
+        .querySelectorAll(
+          ".time-btn"
+        )
+        .forEach(btn => {
+          btn.classList.remove(
+            "selected"
+          );
         });
 
-      const nextScreenElement =
-        document.getElementById(
-          "screen" + number
+      button.classList.add(
+        "selected"
+      );
+
+      selectedTimeText.textContent =
+        `Выбрано: ${time}`;
+
+      timeNextButton.disabled =
+        false;
+
+      timeNextButton.style.opacity =
+        "1";
+    };
+
+    timeGrid.appendChild(
+      button
+    );
+
+  });
+
+
+  function saveTime() {
+
+    if (!deliveryTime) {
+      return;
+    }
+
+    showScreen(7);
+
+  }
+
+
+  /* =========================
+     РУЛЕТКА
+     ========================= */
+
+  let wheelRotation1 = 0;
+
+  let wheelRotation2 = 0;
+
+
+  function startRoulette(number) {
+
+    showScreen(8);
+
+  }
+
+
+  function spinRoulette(number) {
+
+    const button =
+      document.getElementById(
+        "spinButton" + number
+      );
+
+    const status =
+      document.getElementById(
+        "spinStatus" + number
+      );
+
+    const wheel =
+      document.getElementById(
+        "wheel" + number
+      );
+
+
+    if (
+      button.disabled ||
+      (number === 1 && roulette1Finished) ||
+      (number === 2 && roulette2Finished)
+    ) {
+      return;
+    }
+
+
+    button.disabled = true;
+
+    button.style.opacity = ".5";
+
+    status.textContent =
+      "Рулетка крутится... 🎰";
+
+
+    /*
+      Вращение специально фиксированное.
+      Для пользователя оно выглядит как обычная
+      случайная рулетка, но результат заранее задан.
+    */
+
+    if (number === 1) {
+
+      wheelRotation1 +=
+        360 * 6 + 135;
+
+      wheel.style.transform =
+        `rotate(${wheelRotation1}deg)`;
+
+    } else {
+
+      wheelRotation2 +=
+        360 * 7 + 225;
+
+      wheel.style.transform =
+        `rotate(${wheelRotation2}deg)`;
+
+    }
+
+
+    setTimeout(() => {
+
+      status.textContent =
+        "🏆 Попадание!";
+
+      setTimeout(() => {
+
+        if (number === 1) {
+
+          roulette1Finished = true;
+
+          showScreen(8);
+
+          status.textContent =
+            "🏆 Тайный приз №1 выигран!";
+
+          button.textContent =
+            "Забрать победу 🎀";
+
+          button.disabled = false;
+
+          button.style.opacity =
+            "1";
+
+          button.onclick = () => {
+            showScreen(9);
+          };
+
+        } else {
+
+          roulette2Finished = true;
+
+          showScreen(10);
+
+        }
+
+      }, 800);
+
+    }, 4200);
+
+  }
+
+
+  /* =========================
+     ФИНАЛ
+     ========================= */
+
+  function finishBirthday() {
+
+    const data = {
+
+      deliveryLocation:
+        deliveryLocation,
+
+      deliveryTime:
+        deliveryTime,
+
+      prize1:
+        "won",
+
+      prize2:
+        "won"
+
+    };
+
+
+    /*
+      Пока отправляем данные в Telegram,
+      если приложение открыто внутри Telegram.
+    */
+
+    if (tg) {
+
+      try {
+
+        tg.sendData(
+          JSON.stringify(data)
         );
 
-      if (!nextScreenElement) {
+      } catch (error) {
+
         console.error(
-          "Экран не найден:",
-          number
+          "Ошибка отправки данных:",
+          error
         );
 
-        return;
       }
 
-      nextScreenElement.classList.add("active");
-
-      window.scrollTo(0, 0);
-
-      currentScreen = number;
-    }
-
-
-    /* =========================
-       ЭКРАН 1 → ЭКРАН 2
-       ========================= */
-
-    function startBirthday() {
-
-      showScreen(2);
-
-    }
-
-
-    /* =========================
-       ЭКРАН 2 → ЭКРАН 3
-       ========================= */
-
-    function nextScreen() {
-
-      showScreen(3);
-
-    }
-
-
-    /* =========================
-       СОХРАНЕНИЕ АДРЕСА
-       ========================= */
-
-    function saveLocation() {
-
-      const input =
-        document.getElementById(
-          "deliveryLocation"
-        );
-
-      const value =
-        input.value.trim();
-
-      if (!value) {
-
-        input.focus();
-
-        return;
-      }
-
-      deliveryLocation = value;
-
-      showScreen(6);
-
-    }
-
-
-    /* =========================
-       ВРЕМЯ ДОСТАВКИ
-       ========================= */
-
-    const timeGrid =
-      document.getElementById(
-        "timeGrid"
-      );
-
-    const selectedTimeText =
-      document.getElementById(
-        "selectedTime"
-      );
-
-    const timeNextButton =
-      document.getElementById(
-        "timeNext"
-      );
-
-
-    const deliveryTimes = [
-
-      "10:00",
-      "11:00",
-      "12:00",
-      "13:00",
-      "14:00",
-      "15:00",
-      "16:00",
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00"
-
-    ];
-
-
-    deliveryTimes.forEach(time => {
-
-      const button =
-        document.createElement(
-          "button"
-        );
-
-      button.className =
-        "time-btn";
-
-      button.textContent = time;
-
-      button.type = "button";
-
-
-      button.onclick = () => {
-
-        deliveryTime = time;
-
-
-        document
-          .querySelectorAll(
-            ".time-btn"
-          )
-          .forEach(btn => {
-
-            btn.classList.remove(
-              "selected"
-            );
-
-          });
-
-
-        button.classList.add(
-          "selected"
-        );
-
-
-        selectedTimeText.textContent =
-          `Выбрано: ${time}`;
-
-
-        timeNextButton.disabled =
-          false;
-
-        timeNextButton.style.opacity =
-          "1";
-
-      };
-
-
-      timeGrid.appendChild(
-        button
-      );
-
-    });
-
-
-    /* =========================
-       ЭКРАН 6 → ЭКРАН 7
-       ========================= */
-
-    function saveTime() {
-
-      if (!deliveryTime) {
-        return;
-      }
-
-      showScreen(7);
-
-    }
-
-
-    /* =========================
-       ВРЕМЕННО
-       ========================= */
-
-    function showSecretMessage() {
+    } else {
 
       alert(
-        "Следующий экран — тайные сюрпризы и рулетка 🎰"
+        "Поздравление завершено 🎀"
       );
 
     }
 
-  </script>
+  }
+
+</script>
 
 </body>
 </html>
