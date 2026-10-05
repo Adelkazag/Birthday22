@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -39,17 +40,26 @@
     .app {
       width: min(100%, 430px);
       min-height: 100vh;
+
       background:
-        radial-gradient(circle at top, #ffe1eb 0%, #fff5f8 42%, #ffffff 100%);
+        radial-gradient(
+          circle at top,
+          #ffe1eb 0%,
+          #fff5f8 42%,
+          #ffffff 100%
+        );
+
       overflow: hidden;
       position: relative;
     }
 
     .screen {
       min-height: 100vh;
+
       display: none;
       flex-direction: column;
       justify-content: center;
+
       padding: 28px 20px;
     }
 
@@ -57,9 +67,14 @@
       display: flex;
     }
 
+    /* =========================
+       ОБЩИЕ ЭЛЕМЕНТЫ
+       ========================= */
+
     .badge {
       width: 120px;
       height: 120px;
+
       margin: 0 auto 24px;
 
       border-radius: 50%;
@@ -69,52 +84,68 @@
       justify-content: center;
 
       background:
-        linear-gradient(145deg, #ffd5e2, #f59db9);
+        linear-gradient(
+          145deg,
+          #ffd5e2,
+          #f59db9
+        );
 
       box-shadow:
         0 12px 35px rgba(210, 90, 130, 0.25),
-        inset 0 0 0 4px rgba(255,255,255,0.65);
+        inset 0 0 0 4px rgba(255, 255, 255, 0.65);
     }
 
     .badge span {
       font-size: 52px;
       font-weight: 900;
+
       color: white;
+
       text-shadow:
         0 3px 10px rgba(180, 60, 100, 0.25);
     }
 
     .title {
       margin: 0 0 12px;
+
       text-align: center;
+
       font-size: 28px;
       line-height: 1.2;
+
       font-weight: 800;
     }
 
     .subtitle {
       margin: 0 auto 30px;
+
       max-width: 350px;
+
       text-align: center;
+
       font-size: 16px;
       line-height: 1.55;
+
       color: #777783;
     }
 
     .btn {
       width: 100%;
+
       padding: 15px 18px;
 
       border: 0;
       border-radius: 16px;
 
-      background: linear-gradient(
-        135deg,
-        #f06c96,
-        #e94f84
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #f06c96,
+          #e94f84
+        );
 
       color: white;
+
       font-size: 17px;
       font-weight: 800;
 
@@ -132,137 +163,314 @@
 
     .decor {
       margin-top: 24px;
+
       text-align: center;
+
       font-size: 24px;
+
       letter-spacing: 8px;
     }
 
     .small {
       margin-top: 24px;
+
       text-align: center;
+
       color: #a0a0aa;
+
       font-size: 12px;
     }
+
+    /* =========================
+       ЭКРАН 3 — ПОЖЕЛАНИЯ
+       ========================= */
+
+    .wish-list {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin-bottom: 28px;
+    }
+
+    .wish-card {
+      background: #ffffff;
+
+      border: 1px solid #f5ccd9;
+
+      border-radius: 16px;
+
+      padding: 16px;
+
+      text-align: left;
+
+      box-shadow:
+        0 5px 15px rgba(200, 100, 130, 0.08);
+    }
+
+    /* =========================
+       ЭКРАН 4 — БУКЕТ
+       ========================= */
+
     .bouquet-wrap {
-  text-align: center;
-  margin-bottom: 24px;
-}
+      text-align: center;
 
-.bouquet {
-  width: 230px;
-  height: 230px;
-  margin: 0 auto;
+      margin-bottom: 24px;
+    }
 
-  border-radius: 50%;
+    .bouquet {
+      width: 230px;
+      height: 230px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+      margin: 0 auto;
 
-  background:
-    radial-gradient(circle at 35% 30%, #fff 0%, #ffe4ec 35%, #f7aec5 100%);
+      border-radius: 50%;
 
-  box-shadow:
-    0 15px 40px rgba(220, 90, 130, 0.22),
-    inset 0 0 0 5px rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  font-size: 105px;
-}
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          #ffffff 0%,
+          #ffe4ec 35%,
+          #f7aec5 100%
+        );
 
-.surprise-label {
-  display: inline-block;
+      box-shadow:
+        0 15px 40px rgba(220, 90, 130, 0.22),
+        inset 0 0 0 5px rgba(255, 255, 255, 0.65);
 
-  padding: 7px 13px;
-  margin-bottom: 14px;
+      font-size: 105px;
+    }
 
-  border-radius: 30px;
+    .surprise-label {
+      display: inline-block;
 
-  background: #ffe5ee;
-  color: #df527f;
+      padding: 7px 13px;
 
-  font-size: 13px;
-  font-weight: 800;
-}
+      margin-bottom: 14px;
 
-.bouquet-note {
-  max-width: 350px;
-  margin: 0 auto 28px;
+      border-radius: 30px;
 
-  text-align: center;
+      background: #ffe5ee;
 
-  font-size: 16px;
-  line-height: 1.55;
-  color: #777783;
-}
+      color: #df527f;
+
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .bouquet-note {
+      max-width: 350px;
+
+      margin: 0 auto 28px;
+
+      text-align: center;
+
+      font-size: 16px;
+      line-height: 1.55;
+
+      color: #777783;
+    }
+
+    /* =========================
+       ЭКРАН 5 — АДРЕС
+       ========================= */
 
     .delivery-icon {
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 24px;
+      width: 110px;
+      height: 110px;
 
-  border-radius: 50%;
+      margin: 0 auto 24px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+      border-radius: 50%;
 
-  background: linear-gradient(145deg, #ffdce8, #f5a5bf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  font-size: 48px;
+      background:
+        linear-gradient(
+          145deg,
+          #ffdce8,
+          #f5a5bf
+        );
 
-  box-shadow:
-    0 12px 30px rgba(210, 90, 130, 0.2),
-    inset 0 0 0 4px rgba(255,255,255,0.7);
-}
+      font-size: 48px;
 
-.input-label {
-  display: block;
-  text-align: left;
+      box-shadow:
+        0 12px 30px rgba(210, 90, 130, 0.2),
+        inset 0 0 0 4px rgba(255, 255, 255, 0.7);
+    }
 
-  margin: 0 0 8px 4px;
+    .input-label {
+      display: block;
 
-  font-size: 13px;
-  font-weight: 700;
-  color: #8a7d84;
-}
+      text-align: left;
 
-.delivery-input {
-  width: 100%;
+      margin: 0 0 8px 4px;
 
-  padding: 15px 16px;
+      font-size: 13px;
+      font-weight: 700;
 
-  border: 1px solid #f2c5d4;
-  border-radius: 15px;
+      color: #8a7d84;
+    }
 
-  background: rgba(255,255,255,0.9);
+    .delivery-input {
+      width: 100%;
 
-  color: #333;
-  font-size: 16px;
+      padding: 15px 16px;
 
-  outline: none;
+      border: 1px solid #f2c5d4;
 
-  box-shadow: 0 5px 15px rgba(200,100,130,.06);
+      border-radius: 15px;
 
-  transition: border-color .2s, box-shadow .2s;
-}
+      background: rgba(255, 255, 255, 0.9);
 
-.delivery-input:focus {
-  border-color: #eb7198;
+      color: #333;
 
-  box-shadow:
-    0 0 0 3px rgba(235,113,152,.12);
-}
+      font-size: 16px;
 
-.delivery-hint {
-  margin: 10px 4px 24px;
+      outline: none;
 
-  text-align: left;
+      box-shadow:
+        0 5px 15px rgba(200, 100, 130, 0.06);
 
-  font-size: 12px;
-  line-height: 1.45;
-  color: #99939a;
-}
-    
+      transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+    }
+
+    .delivery-input:focus {
+      border-color: #eb7198;
+
+      box-shadow:
+        0 0 0 3px rgba(235, 113, 152, 0.12);
+    }
+
+    .delivery-hint {
+      margin: 10px 4px 24px;
+
+      text-align: left;
+
+      font-size: 12px;
+      line-height: 1.45;
+
+      color: #99939a;
+    }
+
+    /* =========================
+       ЭКРАН 6 — ВРЕМЯ
+       ========================= */
+
+    .time-title {
+      text-align: left;
+
+      margin: 0 0 10px 4px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      color: #8a7d84;
+    }
+
+    .time-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 10px;
+
+      margin-bottom: 24px;
+    }
+
+    .time-btn {
+      border: 1px solid #f2c5d4;
+
+      border-radius: 14px;
+
+      padding: 13px 4px;
+
+      background: #fff8fa;
+
+      color: #df527f;
+
+      font-size: 15px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.15s ease;
+    }
+
+    .time-btn:active {
+      transform: scale(0.97);
+    }
+
+    .time-btn.selected {
+      background:
+        linear-gradient(
+          135deg,
+          #f06c96,
+          #e94f84
+        );
+
+      color: white;
+
+      border-color: transparent;
+
+      box-shadow:
+        0 6px 16px rgba(233, 79, 132, 0.22);
+    }
+
+    .selected-time {
+      min-height: 22px;
+
+      margin: 0 0 18px;
+
+      text-align: center;
+
+      color: #df527f;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ЭКРАН 7 — ВРЕМЕННАЯ ЗАГЛУШКА
+       ========================= */
+
+    .secret-icon {
+      width: 130px;
+      height: 130px;
+
+      margin: 0 auto 24px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          #f8c2d3,
+          #ec8fac
+        );
+
+      font-size: 58px;
+
+      box-shadow:
+        0 15px 35px rgba(210, 90, 130, 0.22),
+        inset 0 0 0 4px rgba(255,255,255,0.7);
+    }
   </style>
 </head>
 
@@ -270,7 +478,10 @@
 
   <div class="app">
 
-    <!-- ЭКРАН 1 -->
+    <!-- =========================
+         ЭКРАН 1
+         ========================= -->
+
     <section id="screen1" class="screen active">
 
       <div class="badge">
@@ -286,7 +497,10 @@
         несколько сюрпризов и один особенный финал ✨
       </p>
 
-      <button class="btn" onclick="startBirthday()">
+      <button
+        class="btn"
+        onclick="startBirthday()"
+      >
         Начать 🎀
       </button>
 
@@ -301,7 +515,10 @@
     </section>
 
 
-    <!-- ЭКРАН 2 -->
+    <!-- =========================
+         ЭКРАН 2
+         ========================= -->
+
     <section id="screen2" class="screen">
 
       <div class="badge">
@@ -313,176 +530,261 @@
       </h1>
 
       <p class="subtitle">
-        Добро пожаловать в твой маленький праздничный день.
+        Добро пожаловать в твой маленький
+        праздничный день.
         Дальше будет ещё интереснее ✨
       </p>
 
-      <button class="btn" onclick="nextScreen()">
+      <button
+        class="btn"
+        onclick="nextScreen()"
+      >
         Продолжить ✨
       </button>
 
     </section>
-<!-- ЭКРАН 3 -->
-<section id="screen3" class="screen">
 
-  <h1 class="title">
-    ✨ А теперь — несколько пожеланий
-  </h1>
 
-  <p class="subtitle">
-    Пусть в 22 будет побольше всего хорошего:
-  </p>
+    <!-- =========================
+         ЭКРАН 3
+         ========================= -->
 
-  <div style="
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-bottom:28px;
-  ">
+    <section id="screen3" class="screen">
 
-    <div style="
-      background:#fff;
-      border:1px solid #f5ccd9;
-      border-radius:16px;
-      padding:16px;
-      text-align:left;
-      box-shadow:0 5px 15px rgba(200,100,130,.08);
-    ">
-      🌷 Исполнения желаний
-    </div>
+      <h1 class="title">
+        ✨ А теперь — несколько пожеланий
+      </h1>
 
-    <div style="
-      background:#fff;
-      border:1px solid #f5ccd9;
-      border-radius:16px;
-      padding:16px;
-      text-align:left;
-      box-shadow:0 5px 15px rgba(200,100,130,.08);
-    ">
-      ☀️ Побольше ярких и приятных моментов
-    </div>
+      <p class="subtitle">
+        Пусть в 22 будет побольше всего хорошего:
+      </p>
 
-    <div style="
-      background:#fff;
-      border:1px solid #f5ccd9;
-      border-radius:16px;
-      padding:16px;
-      text-align:left;
-      box-shadow:0 5px 15px rgba(200,100,130,.08);
-    ">
-      ✈️ Новых впечатлений и интересных поездок
-    </div>
+      <div class="wish-list">
 
-    <div style="
-      background:#fff;
-      border:1px solid #f5ccd9;
-      border-radius:16px;
-      padding:16px;
-      text-align:left;
-      box-shadow:0 5px 15px rgba(200,100,130,.08);
-    ">
-      😊 Побольше поводов улыбаться
-    </div>
+        <div class="wish-card">
+          🌷 Исполнения желаний
+        </div>
 
-    <div style="
-      background:#fff;
-      border:1px solid #f5ccd9;
-      border-radius:16px;
-      padding:16px;
-      text-align:left;
-      box-shadow:0 5px 15px rgba(200,100,130,.08);
-    ">
-      🎀 И чтобы этот год запомнился только хорошими событиями
-    </div>
+        <div class="wish-card">
+          ☀️ Побольше ярких и приятных моментов
+        </div>
+
+        <div class="wish-card">
+          ✈️ Новых впечатлений и интересных поездок
+        </div>
+
+        <div class="wish-card">
+          😊 Побольше поводов улыбаться
+        </div>
+
+        <div class="wish-card">
+          🎀 И чтобы этот год запомнился
+          только хорошими событиями
+        </div>
+
+      </div>
+
+      <button
+        class="btn"
+        onclick="showScreen(4)"
+      >
+        Дальше 🎀
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         ЭКРАН 4 — БУКЕТ
+         ========================= -->
+
+    <section id="screen4" class="screen">
+
+      <div class="bouquet-wrap">
+
+        <div class="bouquet">
+          💐
+        </div>
+
+      </div>
+
+      <div style="text-align:center;">
+
+        <div class="surprise-label">
+          ПЕРВЫЙ СЮРПРИЗ
+        </div>
+
+        <h1 class="title">
+          💐 Для тебя — букет!
+        </h1>
+
+        <p class="bouquet-note">
+          Начнём с самого приятного.
+          Сегодня тебя ждёт красивый букет,
+          который будет доставлен специально
+          для тебя ✨
+        </p>
+
+        <button
+          class="btn"
+          onclick="showScreen(5)"
+        >
+          Получить букет 🌷
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ЭКРАН 5 — АДРЕС
+         ========================= -->
+
+    <section id="screen5" class="screen">
+
+      <div class="delivery-icon">
+        📍
+      </div>
+
+      <h1 class="title">
+        Куда доставить букет?
+      </h1>
+
+      <p class="subtitle">
+        Осталось совсем немного.
+        Укажи место, куда можно будет
+        доставить первый сюрприз 💐
+      </p>
+
+      <div style="width:100%;">
+
+        <label
+          class="input-label"
+          for="deliveryLocation"
+        >
+          Адрес доставки
+        </label>
+
+        <input
+          id="deliveryLocation"
+          class="delivery-input"
+          type="text"
+          placeholder="Например: Москва, ул. ..."
+          autocomplete="street-address"
+        >
+
+        <p class="delivery-hint">
+          Можно указать адрес, адрес работы
+          или другое удобное место.
+        </p>
+
+        <button
+          class="btn"
+          onclick="saveLocation()"
+        >
+          Продолжить 🎀
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ЭКРАН 6 — ВРЕМЯ
+         ========================= -->
+
+    <section id="screen6" class="screen">
+
+      <div class="delivery-icon">
+        🕐
+      </div>
+
+      <h1 class="title">
+        Во сколько доставить?
+      </h1>
+
+      <p class="subtitle">
+        Выбери удобное время для получения
+        букета 💐
+      </p>
+
+      <div style="width:100%;">
+
+        <p class="time-title">
+          Время доставки
+        </p>
+
+        <div
+          class="time-grid"
+          id="timeGrid"
+        ></div>
+
+        <p
+          class="selected-time"
+          id="selectedTime"
+        >
+          Выбери время
+        </p>
+
+        <button
+          class="btn"
+          id="timeNext"
+          onclick="saveTime()"
+          style="opacity:.45"
+          disabled
+        >
+          Продолжить 🎀
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ЭКРАН 7 — ПОКА ЗАГЛУШКА
+         ========================= -->
+
+    <section id="screen7" class="screen">
+
+      <div class="secret-icon">
+        🎁
+      </div>
+
+      <h1 class="title">
+        Готово! 🎀
+      </h1>
+
+      <p class="subtitle">
+        Букет отправится по выбранному
+        адресу и в выбранное время.
+
+        <br><br>
+
+        Но на этом поздравление
+        ещё не заканчивается... ✨
+      </p>
+
+      <button
+        class="btn"
+        onclick="showSecretMessage()"
+      >
+        Продолжить 🎁
+      </button>
+
+    </section>
 
   </div>
 
-  <button class="btn" onclick="showScreen(4)">
-    Дальше 🎀
-  </button>
-
-</section>
-
-    <!-- ЭКРАН 4 -->
-<section id="screen4" class="screen">
-
-  <div class="bouquet-wrap">
-
-    <div class="bouquet">
-      💐
-    </div>
-
-  </div>
-
-  <div style="text-align:center;">
-
-    <div class="surprise-label">
-      ПЕРВЫЙ СЮРПРИЗ
-    </div>
-
-    <h1 class="title">
-      💐 Для тебя — букет!
-    </h1>
-
-    <p class="bouquet-note">
-      Начнём с самого приятного.
-      Сегодня тебя ждёт красивый букет,
-      который будет доставлен специально для тебя ✨
-    </p>
-
-    <button class="btn" onclick="showScreen(5)">
-      Получить букет 🌷
-    </button>
-
-  </div>
-  
-</section>
-  <!-- ЭКРАН 5 -->
-<section id="screen5" class="screen">
-
-  <div class="delivery-icon">
-    📍
-  </div>
-
-  <h1 class="title">
-    Куда доставить букет?
-  </h1>
-
-  <p class="subtitle">
-    Осталось совсем немного.
-    Укажи место, куда можно будет доставить первый сюрприз 💐
-  </p>
-
-  <div style="width:100%;">
-
-    <label class="input-label" for="deliveryLocation">
-      Адрес доставки
-    </label>
-
-    <input
-      id="deliveryLocation"
-      class="delivery-input"
-      type="text"
-      placeholder="Например: Казань, ул. ..."
-      autocomplete="street-address"
-    >
-
-    <p class="delivery-hint">
-      Можно указать адрес ДУ, адрес учебы или другое удобное место.
-    </p>
-
-    <button class="btn" onclick="saveLocation()">
-      Продолжить 🎀
-    </button>
-
-  </div>
-  
-</section>
-    
-  </div>
 
   <script>
+
+    /* =========================
+       TELEGRAM
+       ========================= */
+
     const tg = window.Telegram?.WebApp;
 
     if (tg) {
@@ -490,29 +792,227 @@
       tg.expand();
     }
 
+
+    /* =========================
+       ПЕРЕМЕННЫЕ
+       ========================= */
+
     let currentScreen = 1;
 
+    let deliveryLocation = "";
+
+    let deliveryTime = "";
+
+
+    /* =========================
+       ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ
+       ========================= */
+
     function showScreen(number) {
-      document.querySelectorAll(".screen").forEach(screen => {
-        screen.classList.remove("active");
-      });
 
       document
-        .getElementById("screen" + number)
-        .classList.add("active");
+        .querySelectorAll(".screen")
+        .forEach(screen => {
+
+          screen.classList.remove("active");
+
+        });
+
+      const nextScreenElement =
+        document.getElementById(
+          "screen" + number
+        );
+
+      if (!nextScreenElement) {
+        console.error(
+          "Экран не найден:",
+          number
+        );
+
+        return;
+      }
+
+      nextScreenElement.classList.add("active");
 
       window.scrollTo(0, 0);
 
       currentScreen = number;
     }
 
+
+    /* =========================
+       ЭКРАН 1 → ЭКРАН 2
+       ========================= */
+
     function startBirthday() {
+
       showScreen(2);
+
     }
 
+
+    /* =========================
+       ЭКРАН 2 → ЭКРАН 3
+       ========================= */
+
     function nextScreen() {
+
       showScreen(3);
+
     }
+
+
+    /* =========================
+       СОХРАНЕНИЕ АДРЕСА
+       ========================= */
+
+    function saveLocation() {
+
+      const input =
+        document.getElementById(
+          "deliveryLocation"
+        );
+
+      const value =
+        input.value.trim();
+
+      if (!value) {
+
+        input.focus();
+
+        return;
+      }
+
+      deliveryLocation = value;
+
+      showScreen(6);
+
+    }
+
+
+    /* =========================
+       ВРЕМЯ ДОСТАВКИ
+       ========================= */
+
+    const timeGrid =
+      document.getElementById(
+        "timeGrid"
+      );
+
+    const selectedTimeText =
+      document.getElementById(
+        "selectedTime"
+      );
+
+    const timeNextButton =
+      document.getElementById(
+        "timeNext"
+      );
+
+
+    const deliveryTimes = [
+
+      "10:00",
+      "11:00",
+      "12:00",
+      "13:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00",
+      "18:00",
+      "19:00",
+      "20:00",
+      "21:00"
+
+    ];
+
+
+    deliveryTimes.forEach(time => {
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+      button.className =
+        "time-btn";
+
+      button.textContent = time;
+
+      button.type = "button";
+
+
+      button.onclick = () => {
+
+        deliveryTime = time;
+
+
+        document
+          .querySelectorAll(
+            ".time-btn"
+          )
+          .forEach(btn => {
+
+            btn.classList.remove(
+              "selected"
+            );
+
+          });
+
+
+        button.classList.add(
+          "selected"
+        );
+
+
+        selectedTimeText.textContent =
+          `Выбрано: ${time}`;
+
+
+        timeNextButton.disabled =
+          false;
+
+        timeNextButton.style.opacity =
+          "1";
+
+      };
+
+
+      timeGrid.appendChild(
+        button
+      );
+
+    });
+
+
+    /* =========================
+       ЭКРАН 6 → ЭКРАН 7
+       ========================= */
+
+    function saveTime() {
+
+      if (!deliveryTime) {
+        return;
+      }
+
+      showScreen(7);
+
+    }
+
+
+    /* =========================
+       ВРЕМЕННО
+       ========================= */
+
+    function showSecretMessage() {
+
+      alert(
+        "Следующий экран — тайные сюрпризы и рулетка 🎰"
+      );
+
+    }
+
   </script>
 
 </body>
