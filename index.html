@@ -614,12 +614,17 @@
   left: 50%;
   top: 50%;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(0deg);
+
+  transition:
+    transform 4s cubic-bezier(.12,.82,.18,1);
+
+  will-change: transform;
 }
 
 /* 1 — верх / немного вправо */
 .label-1 {
-  margin-left: 21.8%;
+  margin-left: 16.8%;
   margin-top: -28.6%;
 }
 
@@ -1504,13 +1509,18 @@
       случайная рулетка, но результат заранее задан.
     */
 
-  if (number === 1) {
+ if (number === 1) {
 
   wheelRotation1 +=
     360 * 6 + 157.5;
 
   wheel.style.transform =
     `rotate(${wheelRotation1}deg)`;
+
+  wheel.querySelectorAll(".wheel-label").forEach(label => {
+    label.style.transform =
+      `translate(-50%, -50%) rotate(${-wheelRotation1}deg)`;
+  });
 
 } else {
 
@@ -1519,6 +1529,11 @@
 
   wheel.style.transform =
     `rotate(${wheelRotation2}deg)`;
+
+  wheel.querySelectorAll(".wheel-label").forEach(label => {
+    label.style.transform =
+      `translate(-50%, -50%) rotate(${-wheelRotation2}deg)`;
+  });
 }
 
 
