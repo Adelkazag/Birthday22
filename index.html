@@ -194,6 +194,75 @@
   line-height: 1.55;
   color: #777783;
 }
+
+    .delivery-icon {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 24px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, #ffdce8, #f5a5bf);
+
+  font-size: 48px;
+
+  box-shadow:
+    0 12px 30px rgba(210, 90, 130, 0.2),
+    inset 0 0 0 4px rgba(255,255,255,0.7);
+}
+
+.input-label {
+  display: block;
+  text-align: left;
+
+  margin: 0 0 8px 4px;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #8a7d84;
+}
+
+.delivery-input {
+  width: 100%;
+
+  padding: 15px 16px;
+
+  border: 1px solid #f2c5d4;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.9);
+
+  color: #333;
+  font-size: 16px;
+
+  outline: none;
+
+  box-shadow: 0 5px 15px rgba(200,100,130,.06);
+
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.delivery-input:focus {
+  border-color: #eb7198;
+
+  box-shadow:
+    0 0 0 3px rgba(235,113,152,.12);
+}
+
+.delivery-hint {
+  margin: 10px 4px 24px;
+
+  text-align: left;
+
+  font-size: 12px;
+  line-height: 1.45;
+  color: #99939a;
+}
+    
   </style>
 </head>
 
@@ -367,7 +436,48 @@
     </button>
 
   </div>
+  
+</section>
+  <!-- ЭКРАН 5 -->
+<section id="screen5" class="screen">
 
+  <div class="delivery-icon">
+    📍
+  </div>
+
+  <h1 class="title">
+    Куда доставить букет?
+  </h1>
+
+  <p class="subtitle">
+    Осталось совсем немного.
+    Укажи место, куда можно будет доставить первый сюрприз 💐
+  </p>
+
+  <div style="width:100%;">
+
+    <label class="input-label" for="deliveryLocation">
+      Адрес доставки
+    </label>
+
+    <input
+      id="deliveryLocation"
+      class="delivery-input"
+      type="text"
+      placeholder="Например: Москва, ул. ..."
+      autocomplete="street-address"
+    >
+
+    <p class="delivery-hint">
+      Можно указать адрес, адрес работы или другое удобное место.
+    </p>
+
+    <button class="btn" onclick="saveLocation()">
+      Продолжить 🎀
+    </button>
+
+  </div>
+  
 </section>
     
   </div>
