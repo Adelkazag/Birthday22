@@ -143,6 +143,57 @@
       color: #a0a0aa;
       font-size: 12px;
     }
+    .bouquet-wrap {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.bouquet {
+  width: 230px;
+  height: 230px;
+  margin: 0 auto;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at 35% 30%, #fff 0%, #ffe4ec 35%, #f7aec5 100%);
+
+  box-shadow:
+    0 15px 40px rgba(220, 90, 130, 0.22),
+    inset 0 0 0 5px rgba(255,255,255,0.65);
+
+  font-size: 105px;
+}
+
+.surprise-label {
+  display: inline-block;
+
+  padding: 7px 13px;
+  margin-bottom: 14px;
+
+  border-radius: 30px;
+
+  background: #ffe5ee;
+  color: #df527f;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.bouquet-note {
+  max-width: 350px;
+  margin: 0 auto 28px;
+
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 1.55;
+  color: #777783;
+}
   </style>
 </head>
 
@@ -283,6 +334,42 @@
   </button>
 
 </section>
+
+    <!-- ЭКРАН 4 -->
+<section id="screen4" class="screen">
+
+  <div class="bouquet-wrap">
+
+    <div class="bouquet">
+      💐
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+
+    <div class="surprise-label">
+      ПЕРВЫЙ СЮРПРИЗ
+    </div>
+
+    <h1 class="title">
+      💐 Для тебя — букет!
+    </h1>
+
+    <p class="bouquet-note">
+      Начнём с самого приятного.
+      Сегодня тебя ждёт красивый букет,
+      который будет доставлен специально для тебя ✨
+    </p>
+
+    <button class="btn" onclick="showScreen(5)">
+      Получить букет 🌷
+    </button>
+
+  </div>
+
+</section>
+    
   </div>
 
   <script>
