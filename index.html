@@ -1168,89 +1168,141 @@
        ЭКРАН 10 — ПОБЕДА
        ========================= -->
 
-  <section id="screen10" class="screen">
+<!-- =========================
+     ЭКРАН 10 — ФИНАЛ
+     ========================= -->
 
-    <div class="winner">
+<section id="screen10" class="screen">
 
-      <div class="winner-icon">
-        🏆
-      </div>
+  <div class="winner">
 
-      <h1 class="winner-title">
-        ОГО, два приза выиграны!
-      </h1>
-
-      <p class="winner-text">
-        Поздравляем! 🎀
-        Ты выиграла оба сюрприза.
-
-        <br><br>
-
-        Но что именно это такое —
-        пока останется секретом 🤫
-      </p>
-
+    <div class="winner-icon">
+      🎉
     </div>
 
-    <div class="final-card">
+    <h1 class="winner-title">
+      Всё готово!
+    </h1>
 
-      <div class="final-item">
+    <p class="winner-text">
+      Ты прошла весь путь и забрала
+      все приготовленные сюрпризы 🎀
 
-        <div class="final-item-icon">
-          💐
-        </div>
-
-        <div>
-          <strong>Букет</strong><br>
-          Заказан для доставки
-        </div>
-
-      </div>
-
-      <div class="final-item">
-
-        <div class="final-item-icon">
-          🎁
-        </div>
-
-        <div>
-          <span class="final-secret">
-            Тайный приз №1
-          </span><br>
-          Выигран
-        </div>
-
-      </div>
-
-      <div class="final-item">
-
-        <div class="final-item-icon">
-          🎁
-        </div>
-
-        <div>
-          <span class="final-secret">
-            Тайный приз №2
-          </span><br>
-          Выигран
-        </div>
-
-      </div>
-
-    </div>
-
-    <p class="final-note">
-      Что именно тебя ждёт?
-      Узнаешь, когда всё окажется у тебя ✨
       <br><br>
-      С днём рождения, Лина! 🎂
+
+      Что именно находится внутри двух
+      тайных подарков — пока секрет 🤫
     </p>
 
-    <button class="btn" onclick="finishBirthday()">
-      Завершить 🎀
-    </button>
+  </div>
 
-  </section>
+
+  <div class="final-card">
+
+    <div class="final-item">
+
+      <div class="final-item-icon">
+        💐
+      </div>
+
+      <div>
+        <strong>Букет</strong><br>
+        Подготовлен к доставке
+      </div>
+
+    </div>
+
+
+    <div class="final-item">
+
+      <div class="final-item-icon">
+        📍
+      </div>
+
+      <div>
+        <strong>Место доставки</strong><br>
+        <span id="finalLocation">
+          —
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="final-item">
+
+      <div class="final-item-icon">
+        🕐
+      </div>
+
+      <div>
+        <strong>Время доставки</strong><br>
+        <span id="finalDeliveryTime">
+          —
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="final-item">
+
+      <div class="final-item-icon">
+        🎁
+      </div>
+
+      <div>
+        <span class="final-secret">
+          Тайный приз №1
+        </span><br>
+        Выигран
+      </div>
+
+    </div>
+
+
+    <div class="final-item">
+
+      <div class="final-item-icon">
+        🎁
+      </div>
+
+      <div>
+        <span class="final-secret">
+          Тайный приз №2
+        </span><br>
+        Выигран
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <p class="final-note">
+
+    Теперь остаётся только дождаться доставки ✨
+
+    <br><br>
+
+    А что именно ты выиграла?
+    Узнаешь уже при получении 🎀
+
+    <br><br>
+
+    <strong>С днём рождения! 🎂</strong>
+
+  </p>
+
+
+  <button
+    class="btn"
+    onclick="finishBirthday()"
+  >
+    Готово 🎀
+  </button>
+
+</section>
 
 </div>
 
@@ -1565,10 +1617,15 @@
           };
 
         } else {
+roulette2Finished = true;
 
-          roulette2Finished = true;
+document.getElementById("finalLocation").textContent =
+  deliveryLocation;
 
-          showScreen(10);
+document.getElementById("finalDeliveryTime").textContent =
+  deliveryTime;
+
+showScreen(10);
 
         }
 
